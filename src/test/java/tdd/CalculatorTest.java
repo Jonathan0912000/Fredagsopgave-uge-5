@@ -18,7 +18,7 @@ class CalculatorTest {
     void tearDown() {
     }
 
-    @Test
+   /* @Test
     void add(){
         int a = 5;
         int b = 5;
@@ -26,31 +26,51 @@ class CalculatorTest {
         int actual = calculator.add(a,b);
         assertEquals(expected,actual);
     }
+    */
 
     @Test
-    void subtract(){
+    void subtract() {
         int a = 10;
         int b = 5;
         int expected = 5;
-        int actual = calculator.subtract(a,b);
-        assertEquals(expected,actual);
+        int actual = calculator.subtract(a, b);
+        assertEquals(expected, actual);
     }
 
     @Test
-    void multiply(){
+    void multiply() {
         int a = 5;
         int b = 5;
         int expected = 25;
-        int actual = calculator.multiply(a,b);
-        assertEquals(expected,actual);
+        int actual = calculator.multiply(a, b);
+        assertEquals(expected, actual);
     }
 
     @Test
-    void divide(){
+    void divide() {
         int a = 5;
         int b = 5;
         int expected = 1;
-        int actual = calculator.divide(a,b);
-        assertEquals(expected,actual);
+        int actual = calculator.divide(a, b);
+        assertEquals(expected, actual);
     }
+    /*@Test
+    void add(){
+        String a = "1,2,3,4,5,6";
+        int expected = 21;
+        int actual = calculator.add(a);
+        assertEquals(expected,actual);
+
+}
+*/
+    
+
+    @Test
+    void add() {
+        int[] numbers = {1, 2, 3, 4, 5, 6};
+        int expected = 21;
+        int actual = calculator.add(numbers);
+        assertEquals(expected, actual);
+    }
+
 }
